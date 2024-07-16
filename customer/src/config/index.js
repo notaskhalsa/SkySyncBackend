@@ -11,6 +11,6 @@ if (process.env.NODE_ENV !== "prod") {
 
 module.exports = {
   PORT: 8001,
-  DB_URL: process.env.MONGODB_URI,
+  DB_URL:"mongodb+srv://arshdeepsinghkhalsacanada:vLX5sKR87wnKYMeS@skysync.9tk8mxv.mongodb.net/?retryWrites=true&w=majority&appName=SkySync",
   APP_SECRET: 'jg_youtube_tutorial',
 };
