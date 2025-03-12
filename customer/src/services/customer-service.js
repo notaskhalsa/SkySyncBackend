@@ -31,7 +31,7 @@ class CustomerService {
             return FormateData(null);
 
         } catch (err) {
-            throw new APIError('Data Not found', err)
+            throw new APIError('Not Signed Up', err)
         }
 
        
@@ -54,7 +54,7 @@ class CustomerService {
             return FormateData({id: existingCustomer._id, token });
 
         }catch(err){
-            throw new APIError('Data Not found', err)
+            return err
         }
 
     }

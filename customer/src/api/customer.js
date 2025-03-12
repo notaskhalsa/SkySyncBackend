@@ -10,7 +10,8 @@ module.exports = (app) => {
       const { data } = await service.SignUp({ email, password, phone });
       return res.json(data);
     } catch (err) {
-      next(err);
+      return err
+      // throw new APIError('Not Signed Up', err);
     }
   });
 
