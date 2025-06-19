@@ -34,4 +34,24 @@ SkySync Architecture Diagram
 - **Docker** – Containerization  
 - **CI/CD** – GitHub Actions → Cloud Router → Kubernetes rolling updates  
 
+## 📁 Microservices Structure
 
+- `user-service/` – Handles user registration, login, role-based auth  
+- `product-service/` – Product catalog management, CRUD operations  
+- `order-service/` – Manages cart, checkout, and order history  
+- `payment-service/` – Integrates payment gateway logic (future Stripe/PayPal ready)  
+
+## 🔐 Authentication
+
+- JWT-based stateless auth  
+- Token issued on login, verified in protected routes across services  
+
+## 📡 API Gateway
+
+- Routes requests to the right microservice  
+- Manages rate limiting, CORS, and header forwarding  
+
+## 🧪 Testing & Logging
+
+- Unit/integration testing support via Jest (planned)  
+- Winston logger with transport support (e.g., CloudWatch)  
